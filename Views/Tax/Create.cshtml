@@ -1,0 +1,41 @@
+﻿
+
+@model EstimateTax.Models.TaxInfo;
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<body style="background-color: white">
+
+
+
+
+
+@using (Html.BeginForm("Index", "Tax", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+    <label>Income:</label>
+    <p>
+
+            @Html.TextBoxFor(m => m.income, new { @class = "form-control  col-sm-4 ", @placeholder = "Enter Income" })
+        @Html.ValidationMessageFor(m => m.income, "", new { @class = "text-danger" })
+
+           
+    </p>
+    <label> PostalCode</label>
+    <p>
+
+
+
+            @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control col-sm-4", @placeholder = "Enter PostalCode" })
+        @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        <input class="radius title" name="Calculate" type="submit" value="calculate">
+    </p>
+}
+</body>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+
+    <label style="text-align: center"> Total Tax </label>
+    <br />
+   <p>
+        @ViewBag.Calculate
+   </p> 
+<br />
+    <label  style=" text-align :center" > Type of Tax </label>
+    <br />
+    <p>
+        @ViewBag.TaxType
+    </p>
+
+    
+</div>
+
+@Html.ActionLink("Back", "Create", null)
+
+
